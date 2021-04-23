@@ -1,20 +1,50 @@
+/* Original Surfer */
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+
 body {
     margin: 0;
-    text-align: center;
-    font-size: 18px;
+    text-align: center; 
+    font-size: 20px;
+    font-family: 'Original Surfer', sans-serif;
+    background-color: #bced12;
+    color: #4312ed;
+}
+
+.heading {
+    text-transform: uppercase;
 }
 
 .listContainer {
-    /* list-style-position: inside; */
-    list-style-type: none;
+    margin-bottom: 50px;
+    background-color: white;
 }
 
-li button {
+.divButton {
     margin: 0px 5px;
+    background-color: red;
+    border: 2px solid #4312ed;
+    border-radius: 12px;
+    color: #4312ed;
+    padding: 4px;
+    font-family: 'Original Surfer', sans-serif;
+    font-size: 12px;
 }
 
-input[type="checkbox"] {
-    margin: 0px 5px;
+.inputBox {
+    display: inline-block;
+    border: 2px solid #4312ed;
+    font-size: 18px;
+    font-family: 'Original Surfer', sans-serif;
+}
+
+.btnAdd {
+    background-color: #f5a30a;
+    border-radius: 50%;
+    border: 2px solid #4312ed;
+    padding: 8px;
+    color: #4312ed;
+    font-size: 12px;
+    font-family: 'Original Surfer', sans-serif;
 }
 
 .make-block {
@@ -23,5 +53,7 @@ input[type="checkbox"] {
 
 .linethrough {
     text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px;
 }
 

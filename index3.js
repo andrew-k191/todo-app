@@ -11,26 +11,25 @@ const listFunc = () => {
     listCounter++;
     const listContainer = document.querySelector('.listContainer');
     const inputBox = document.querySelector('.inputBox');
-    const listElement = document.createElement('li');
+    const divElement = document.createElement('div');
     const inputTextSpan = document.createElement('span');
     inputTextSpan.textContent = inputBox.value;
     const checkbox = addCheckbox(inputTextSpan);
-    const deleteBtn = deleteItem(listElement, checkbox);
+    const deleteBtn = deleteItem(divElement, checkbox);
+    
     promptChange();
-
-    // adding checkbox, text, and delete button to list element
-    listElement.append(checkbox, inputTextSpan, deleteBtn);
-    listContainer.append(listElement);
+    divElement.append(checkbox, inputTextSpan, deleteBtn);
+    listContainer.append(divElement);
     inputBox.value = '';
 };
 
-const deleteItem = (listElement, checkbox) => {
+const deleteItem = (divElement, checkbox) => {
     const deleteBtn = document.createElement('button');
-    // deleteBtn.classList.add('button', 'is-danger', 'is-rounded', 'is-small');
-    deleteBtn.textContent = 'remove';
+    deleteBtn.classList.add('divButton');
+    deleteBtn.textContent = 'Remove';
     deleteBtn.addEventListener('click', () => {
         if (checkbox.checked) {
-            listElement.remove();
+            divElement.remove();
             listCounter--;
             promptChange();
         } 
@@ -55,11 +54,7 @@ const addCheckbox = (inputTextSpan) => {
 const promptChange = () => {
     const prompt = document.querySelector('.prompt');
     if (listCounter >= 1) {
-        const span1 = document.createElement('span');
-        span1.classList.add('span-text');
-        span1.textContent = '(check the box to mark tasks as completed!)';
-        prompt.textContent = 'What else?';
-        prompt.append(span1);
+        prompt.textContent = 'Awesome!! What else?';
     } else {
         prompt.textContent = 'What do you want to do today?';
     }
