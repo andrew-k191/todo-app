@@ -3,6 +3,7 @@
 *A simple to-do application using only HTML, CSS, and JavaScript. No frameworks, etc. were used.*
 
 Section 3: Call to action link
+
 Section 4: Screenshot of the Application
 
 ## Summary
