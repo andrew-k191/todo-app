@@ -1,6 +1,6 @@
 # TO-DO App using vanilla JavaScript
 
-* A simple to-do application using only HTML, CSS, and JavaScript. No frameworks, etc. were used.*
+*A simple to-do application using only HTML, CSS, and JavaScript. No frameworks, etc. were used.*
 
 Section 3: Call to action link
 Section 4: Screenshot of the Application
@@ -11,5 +11,5 @@ A simple to-do application. This project was one of my assignments in the Softwa
 
 ## Author
 
-**Andrew Knight** - *Aspiring Software Developer* - (Website) | (LinkedIn)
+* **Andrew Knight** - *Aspiring Software Developer* - (Website) | (LinkedIn)
 
