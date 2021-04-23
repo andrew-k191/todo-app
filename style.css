@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.listContainer {
+    /* list-style-position: inside; */
+    list-style-type: none;
+}
+
+li button {
+    margin: 0px 5px;
+}
+
+input[type="checkbox"] {
+    margin: 0px 5px;
+}
+
+.make-block {
+    display: block;
+}
+
+.linethrough {
+    text-decoration: line-through;
+}
+

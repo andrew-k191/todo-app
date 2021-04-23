@@ -8,15 +8,18 @@
     <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Todo List</h1>
-    <form class="form">
-        <input type="text" class="inputBox">
-        <button class="btnAdd">Add</button>
-    </form>
-    <!-- This is where to-do items will be added -->
-    <ul class="listContainer">    
-    </ul>
+    <h1 class="heading">Todo List</h1>
+    <main class="main">
+        <!-- This is where to-do items will be added -->
+        <ul class="listContainer">    
+        </ul>
     
+        <form class="form">
+            <label class="prompt make-block">What do you want to do today?</label>
+            <input type="text" class="inputBox" required>
+            <button class="btnAdd">Add</button>
+        </form>
+    </main>
     <!-- <script src="index.js"></script> -->
     <script src="index3.js"></script>
 </body>
