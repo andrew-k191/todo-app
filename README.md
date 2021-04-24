@@ -4,7 +4,7 @@
 
 Check it out here: https://andrew-k191.github.io/todo-app/
 
-<img width="1920" alt="todoApp" src="https://user-images.githubusercontent.com/58952480/115941803-dbb54000-a45b-11eb-9b45-e603f4d3dc83.png">
+<img src="todoApp.png">
 
 ## Summary
 
