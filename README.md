@@ -2,7 +2,7 @@
 
 *A simple to-do application using only HTML, CSS, and JavaScript. No frameworks, etc. were used.*
 
-Check it out here: https://github.com/andrew-k191/andrew-k191.github.io.git
+Check it out here: https://andrew-k191.github.io/todo-app/
 
 <img width="1920" alt="todoApp" src="https://user-images.githubusercontent.com/58952480/115941803-dbb54000-a45b-11eb-9b45-e603f4d3dc83.png">
 
