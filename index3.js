@@ -1,59 +1,55 @@
-// tracks current number of to-do list items
-let listCounter = 0;
-
-const form = document.querySelector('.form');
-form.addEventListener('submit', (e) => {
+document.querySelector('.form')
+.addEventListener('submit', (e) => {
     e.preventDefault();
-    listFunc();
+    addTodo();
 });
 
-const listFunc = () => {
-    listCounter++;
+const addTodo = () => {
     const listContainer = document.querySelector('.listContainer');
     const inputBox = document.querySelector('.inputBox');
-    const divElement = document.createElement('div');
-    const inputTextSpan = document.createElement('span');
-    inputTextSpan.textContent = inputBox.value;
-    const checkbox = addCheckbox(inputTextSpan);
-    const deleteBtn = deleteItem(divElement, checkbox);
+    const todoText = inputBox.value;
+
+    const todoDiv = document.createElement('div');
+    const todoTextSpan = document.createElement('span');
+    todoTextSpan.textContent = todoText;
+
+    const checkbox = createCheckbox(todoTextSpan);
+    const deleteButton = createDeleteButton(todoDiv, checkbox);
     
-    promptChange();
-    divElement.append(checkbox, inputTextSpan, deleteBtn);
-    listContainer.append(divElement);
+    todoDiv.append(checkbox, todoTextSpan, deleteButton);
+    listContainer.append(todoDiv);
     inputBox.value = '';
+    changeFormLabelText();
 };
 
-const deleteItem = (divElement, checkbox) => {
-    const deleteBtn = document.createElement('button');
-    deleteBtn.classList.add('divButton');
-    deleteBtn.textContent = 'Remove';
-    deleteBtn.addEventListener('click', () => {
+const createDeleteButton = (divElement, checkbox) => {
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('divButton');
+    deleteButton.textContent = 'Remove';
+    deleteButton.addEventListener('click', () => {
         if (checkbox.checked) {
             divElement.remove();
-            listCounter--;
-            promptChange();
+            /*--- Made change here---*/
+            changeFormLabelText();
         } 
     });
-    return deleteBtn;
+    return deleteButton;
 };
 
-const addCheckbox = (inputTextSpan) => {
+const createCheckbox = (todoTextSpan) => {
     const checkbox = document.createElement('input');
     checkbox.setAttribute('type', 'checkbox');
     checkbox.addEventListener('change', () => {
-        if (inputTextSpan.classList.contains('linethrough')) {
-            inputTextSpan.classList.remove('linethrough');
-            
-        } else {
-            inputTextSpan.classList.add('linethrough');
-        }
+        todoTextSpan.classList.toggle('lineThrough');
     });
     return checkbox;
 };
 
-const promptChange = () => {
+const changeFormLabelText = () => {
+    const listContainer = document.querySelector('.listContainer');
+    const length = listContainer.children.length;
     const prompt = document.querySelector('.prompt');
-    if (listCounter >= 1) {
+    if (length > 0) {
         prompt.textContent = 'Awesome!! What else?';
     } else {
         prompt.textContent = 'What do you want to do today?';
