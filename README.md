@@ -12,5 +12,5 @@ A simple to-do application. This project was one of my assignments in the Softwa
 
 ## Author
 
-* **Andrew Knight** - *Aspiring Software Developer* - (Website) | (LinkedIn)
+* **Andrew Knight** - *Software Developer* - (Website) | (LinkedIn)
 
